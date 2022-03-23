@@ -8,12 +8,12 @@ The simulation continues as long as there is at least one ecosystem alive. All t
 
 Below are presented the results of the simulations
 
-For three factories.
+For three factories:
 
 ![3](https://user-images.githubusercontent.com/56920806/159654804-c4a84295-2458-46e9-a845-9d9fe69d40c1.png)
 ![4](https://user-images.githubusercontent.com/56920806/159654813-f8d5e98c-3549-44b7-ab23-d44c4f69a521.png)
 
-For four factories
+For four factories:
 
 ![1](https://user-images.githubusercontent.com/56920806/159648098-1fb31868-0078-4222-bb6f-c1ed34a83c9b.png)
 ![2](https://user-images.githubusercontent.com/56920806/159648148-8a139d9a-a6e7-447b-a4fa-8b39824fd76a.png)
