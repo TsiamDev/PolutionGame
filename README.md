@@ -34,7 +34,7 @@ For three factories
 I know from:
 https://eclass.upatras.gr/modules/document/file.php/CEID1154/02-Lecture-Intro_Games_Strategies_Solutions.pdf
 (It is in greek - apologies if I find an english source I will cite it here)
-that a dominant strategy solution (if exists) is unique for the game. Also, I know that the dominant strategy solution minimizes the cost, so in the case of the n factories, they all remain passive.
+that a dominant strategy solution (if exists) is unique for the game. Also, I know that the dominant strategy solution minimizes the cost, so in the case of the n selfish and rational factories, they all remain passive. This is shown from the charts above, because the global minimum is when number of active policies is 0.
 
 
 
