@@ -14,6 +14,7 @@ For three factories.
 ![4](https://user-images.githubusercontent.com/56920806/159654813-f8d5e98c-3549-44b7-ab23-d44c4f69a521.png)
 
 For four factories
+
 ![1](https://user-images.githubusercontent.com/56920806/159648098-1fb31868-0078-4222-bb6f-c1ed34a83c9b.png)
 ![2](https://user-images.githubusercontent.com/56920806/159648148-8a139d9a-a6e7-447b-a4fa-8b39824fd76a.png)
 
@@ -21,9 +22,11 @@ Each factory is assumed to be rational and selfish, and has the choicce of eithe
 
 Below is depicted the normal form of the game (payoff matrices):
 For four factories.
+
 ![5](https://user-images.githubusercontent.com/56920806/159655440-987a4653-37e9-4253-9d63-75aad9c5bf39.png)
 
 For three factories
+
 ![6](https://user-images.githubusercontent.com/56920806/159656198-ebaf49e7-d2cf-4fbf-a8c5-a3cfb47fed02.png)
 
 
