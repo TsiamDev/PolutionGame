@@ -20,11 +20,11 @@ For four factories
 Each factory is assumed to be rational and selfish, and has the choicce of either enacting policies to mitigate its' emissions (with a cost of 3) or to be apathetic (with a cost of 1 and also a penalty of 1 to every other factory). 
 
 Below is depicted the normal form of the game (payoff matrices):
-  For four factories.
-  ![5](https://user-images.githubusercontent.com/56920806/159655440-987a4653-37e9-4253-9d63-75aad9c5bf39.png)
-  
-  For three factories
-  ![6](https://user-images.githubusercontent.com/56920806/159656198-ebaf49e7-d2cf-4fbf-a8c5-a3cfb47fed02.png)
+For four factories.
+![5](https://user-images.githubusercontent.com/56920806/159655440-987a4653-37e9-4253-9d63-75aad9c5bf39.png)
+
+For three factories
+![6](https://user-images.githubusercontent.com/56920806/159656198-ebaf49e7-d2cf-4fbf-a8c5-a3cfb47fed02.png)
 
 
 
