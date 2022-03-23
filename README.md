@@ -21,13 +21,20 @@ For four factories
 Each factory is assumed to be rational and selfish, and has the choicce of either enacting policies to mitigate its' emissions (with a cost of 3) or to be apathetic (with a cost of 1 and also a penalty of 1 to every other factory). 
 
 Below is depicted the normal form of the game (payoff matrices):
-For four factories.
+
+For four factories:
+(It is a bit difficult to draw the normal form for four factories but I attempt it below)
 
 ![5](https://user-images.githubusercontent.com/56920806/159699887-37eba4d7-6cb2-41f2-8c72-40556a7084e5.png)
 
 For three factories
 
 ![6](https://user-images.githubusercontent.com/56920806/159699918-cac41afd-27b6-4731-9613-f415e569321c.png)
+
+I know from:
+https://eclass.upatras.gr/modules/document/file.php/CEID1154/02-Lecture-Intro_Games_Strategies_Solutions.pdf
+(It is in greek - apologies if I find an english source I will cite it here)
+that a dominant strategy solution (if exists) is unique for the game. Also, I know that the dominant strategy solution minimizes the cost, so in the case of the n factories, they all remain passive.
 
 
 
