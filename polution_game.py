@@ -8,6 +8,7 @@ import pygame
 from pygame.locals import *
 import sys
 import time
+import math
 
 import matplotlib.pyplot as plt
 
@@ -29,7 +30,7 @@ pygame.draw.rect(surface, green, pygame.Rect(93, 30, 60, 60))
 pygame.draw.rect(surface, green, pygame.Rect(93, 93, 60, 60))
 pygame.display.flip()
 
-global factories
+global factories, emissions
 
 class Factory:
     def __init__(self, em, x, y, _id, sub, policy):
@@ -41,6 +42,7 @@ class Factory:
         self.subsidies = sub
         self.profit = 0
         self.policy = policy
+        self.emis_temp = 0
 
     def Produce(self, polution_cost_from_neigh):
         polution_costs_to_neigh = 0
@@ -49,9 +51,12 @@ class Factory:
         # subtract the environmental policy costs
         if self.policy == True:
             temp = self.subsidies - 3
+            self.emissions = math.ceil(self.emissions /2)
         else:
             temp = self.subsidies - 1
             polution_costs_to_neigh = 1
+        
+        self.emis_temp = self.emis_temp + self.emissions 
         
         self.stp = temp - polution_cost_from_neigh
         
@@ -124,7 +129,7 @@ def print_policies(factories):
             print("Factory ", f._id, " has passive policy.")
     
 def main():
-    global factories
+    global factories, emissions, emis_temp
 
     # remember # of active policies per iteration
     policies = []
@@ -140,6 +145,9 @@ def main():
 
     # number of total rounds
     rounds = []
+    
+    # total emissions per iteration (avg)
+    emissions = []
 
     # get all possible combinations of factories and their policies
     mask0 = 0x01
@@ -159,6 +167,9 @@ def main():
         t0 = time.clock()
         t1 = time.clock()
         
+        # reset emissions counter
+        emis_temp = 0
+        
         _round = 0
         while True:
             #print(t1 - t0)
@@ -174,7 +185,6 @@ def main():
                         neigh_polution = neigh_polution + 1
                 
                 polution_costs_to_neigh = factories[i].Produce(neigh_polution)
-                #neigh_polution = neigh_polution + polution_costs_to_neigh
                 
                 died, polution_trickle = update_tile(factories[i])
                 print(polution_trickle)
@@ -200,6 +210,9 @@ def main():
                 # short term profit
                 stp = 0
                 
+                # emssions counter
+                em_temp = 0
+                
                 num_active_policies = 0
                 for i in range(0, len(factories)):
                     # individual profit
@@ -207,11 +220,16 @@ def main():
                     
                     ltp = ltp + factories[i].profit
                     stp = stp + factories[i].stp
-                    if f.policy:
+                    
+                    em_temp = em_temp + factories[i].emis_temp
+                    
+                    if factories[i].policy:
                         num_active_policies = num_active_policies + 1
                 ltps.append(ltp)
                 stps.append(stp)
                 policies.append(num_active_policies)
+                
+                emissions.append(em_temp / 4)
                 
                 rounds.append(_round)
                 
@@ -227,8 +245,9 @@ def main():
                    sys.exit()
         #end if--------------------------------------------------------------------------         
         t1 = time.clock()
-    
-    fig, ax = plt.subplots(4)
+    pygame.quit()
+    #sys.exit()
+    fig, ax = plt.subplots(5)
     fig.tight_layout()
     
     ax[0].plot(range(0, 16), ltps)
@@ -242,6 +261,9 @@ def main():
     
     ax[3].plot(range(0, 16), rounds)
     ax[3].set_title("# of rounds per iteration")
+    
+    ax[4].plot(range(0, 16), emissions)
+    ax[4].set_title("Emissions")
     #----------------------------------------------------------------------
     fig, ax = plt.subplots(2, 2)
     fig.tight_layout()
